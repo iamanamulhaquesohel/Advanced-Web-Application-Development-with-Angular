@@ -1,4 +1,4 @@
-# Advanced-Web-Application-Development-with-AngularJS
+# Advanced-Web-Application-Development-with-Angular
 
 #MVC Core Data API and AngularJS FrontEnd Crud Website
 
