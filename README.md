@@ -1,9 +1,10 @@
 # Advanced-Web-Application-Development-with-Angular
 
-#How to Open:
+#How to run:
 
-First Go to the Client UI Folder then run the "Install Node Module" File.
-then Go to the 
+1. Go to the Client UI/ Folder then run the "Install Node Module" File.
+2. Go to the Company App DataAPI/ Folder then run the "Run Data Server" File.
+3. Go to the Client UI/ Folder then run the "Run Client Server" File.
 
 
 
