@@ -1,0 +1,28 @@
+<div class="form-container">
+    <h2>Create new Branch</h2>
+    <form #addFrm="ngForm" (ngSubmit)="create(addFrm)">
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branch Name</mat-label>
+        <input matInput type="text" name="branchName" id="branchName" [(ngModel)]="Branch.branchName" #branchName="ngModel" required />
+        <mat-error *ngIf="branchName.touched && branchName.invalid">Branch Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branch Address</mat-label>
+        <input matInput type="text" name="branchAddress" id="branchAddress" [(ngModel)]="Branch.branchAddress" #branchAddress="ngModel" required />
+        <mat-error *ngIf="branchAddress.touched && branchAddress.invalid">Branch Address is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branch Email</mat-label>
+        <input matInput type="email" name="branchEmail" id="branchEmail" [(ngModel)]="Branch.branchEmail" #branchEmail="ngModel" required />
+        <mat-error *ngIf="branchEmail.touched && branchEmail.invalid">Branch Email is required</mat-error>
+      </mat-form-field>
+  
+      <div class="f-w">
+        <button type="reset" mat-raised-button>Reset</button>
+        &nbsp;
+        <button type="submit" mat-raised-button color="primary" [disabled]="addFrm.invalid"><mat-icon>save</mat-icon>Create</button>
+      </div>
+    </form>
+    <a mat-flat-button [routerLink]="['/branch']" class="mt-1"><mat-icon>west</mat-icon> Back to Branches</a>
+  </div>
+  

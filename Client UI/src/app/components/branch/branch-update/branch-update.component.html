@@ -1,0 +1,26 @@
+<div class="form-container">
+    <h2>Update Branch:</h2>
+    <form #updateFrm="ngForm" (ngSubmit)="update(updateFrm)">
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branch Name</mat-label>
+        <input matInput type="text" name="branchName" id="branchName" [(ngModel)]="Branch.branchName" #branchName="ngModel" required />
+        <mat-error *ngIf="branchName.touched && branchName.invalid">Branch Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branch Address</mat-label>
+        <input matInput type="text" name="branchAddress" id="branchAddress" [(ngModel)]="Branch.branchAddress" #branchAddress="ngModel" required />
+        <mat-error *ngIf="branchAddress.touched && branchAddress.invalid">Branch Address is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branch Email</mat-label>
+        <input matInput type="email" name="branchEmail" id="branchEmail" [(ngModel)]="Branch.branchEmail" #branchEmail="ngModel" required />
+        <mat-error *ngIf="branchEmail.touched && branchEmail.invalid">Branch Email is required</mat-error>
+      </mat-form-field>
+      <div class="f-w">
+        &nbsp;
+        <button type="submit" mat-raised-button color="primary" [disabled]="updateFrm.invalid"><mat-icon style="margin-right:10px;">edit_note</mat-icon>Update</button>
+      </div>
+    </form>
+    <a mat-flat-button [routerLink]="['/branch']" class="mt-1"><mat-icon>west</mat-icon> Back to Branches</a>
+  </div>
+  

@@ -1,0 +1,48 @@
+<div class="form-container">
+    <h2>Update Employee:</h2>
+    <form [formGroup]="employeeForm" (submit)="update()">
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Employee Name</mat-label>
+        <input matInput type="text" formControlName="employeeName" />
+        <mat-error *ngIf="Form.employeeName.touched && Form.employeeName.errors?.required">Employee Name is required</mat-error>
+        <mat-error *ngIf="Form.employeeName.touched && Form.employeeName.errors?.maxlength">Maximum 50 characters is allowed</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Employee Phone</mat-label>
+        <input matInput type="text" formControlName="employeePhone" />
+        <mat-error *ngIf="Form.employeePhone.touched && Form.employeePhone.errors?.required">Employee Phone is required</mat-error>
+        <mat-error *ngIf="Form.employeePhone.touched && Form.employeePhone.errors?.maxlength">Maximum 20 characters is allowed</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Employee Salary</mat-label>
+        <input matInput type="number" formControlName="employeeSalary" />
+        <mat-error *ngIf="Form.employeeSalary.touched && Form.employeeSalary.errors?.required">Employee Salary is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Employee Join Date</mat-label>
+        <input matInput formControlName="employeeJoinDate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="Form.employeeJoinDate.touched && Form.employeeJoinDate.errors?.required">Employee Join date is required</mat-error>
+      </mat-form-field>
+      <mat-form-field class="f-w" appearance="standard">
+        <mat-label>Branches Name</mat-label>
+        <mat-select formControlName="branchId">
+          <mat-option [value]="">Select Branch</mat-option>
+          <mat-option *ngFor="let b of Branches" [value]="b.branchId">{{b.branchName}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="Form.branchId.touched && Form.branchId.errors?.required">Branch Name is required</mat-error>
+      </mat-form-field>
+      <div class="f-w">
+        &nbsp;
+        <button type="submit" mat-raised-button color="primary" [disabled]="employeeForm.invalid"><mat-icon>edit_note</mat-icon>Update</button>
+      </div>
+    </form>
+    <a mat-flat-button [routerLink]="['/employee']" class="mt-1"><mat-icon>west</mat-icon> Back to Employees</a>
+  
+  </div>
+  
+  
+  
+  
+  
