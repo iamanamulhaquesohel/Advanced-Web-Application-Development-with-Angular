@@ -7,17 +7,16 @@
 3. Go to the Client UI/ Folder then run the "Run Client Server" File.
 
 
-
 # MVC Core Data API and AngularJS FrontEnd Crud Website
 
 # Crud Operation Company Site
 
 # Requirement Filled in Project
 
-One to Many RelationShip Database.
-Database Code First in Model.
-Data API Controller in Core.
-Data Anotation Server Side.
-Data Anotation Client Side.
-Different type of Data Variation.
+1. One to Many RelationShip Database.
+2. Database Code First in Model.
+3. Data API Controller in Core.
+4. Data Anotation Server Side.
+5. Data Anotation Client Side.
+6. Different type of Data Variation.
 
