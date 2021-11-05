@@ -1,5 +1,12 @@
 # Advanced-Web-Application-Development-with-Angular
 
+#How to Open:
+
+First Go to the Client UI Folder then run the "Install Node Module" File.
+then Go to the 
+
+
+
 #MVC Core Data API and AngularJS FrontEnd Crud Website
 
 #Crud Operation Company Site
